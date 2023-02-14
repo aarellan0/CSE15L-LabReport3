@@ -2,6 +2,7 @@
 ## Aaron Arellano
 
 In this third lab report, I chose to research the grep command, which is utilized for finding specific files in directories given certain specifications.
+**The Sources used for ALL commands are at the bottom of the report.**
 
 # Alternate command 1: grep - n
 
@@ -240,6 +241,13 @@ With this second example, I used the grep -v command with ".txt" as the command 
 the few lines that don't contain a ".txt" file. In the end, the command only returned the various paths for subdirectories within written_2 and ignored 
 the paths for specific .txt files. This command is useful because it makes searching for information faster by ignoring information that a user doesn't
 want and leaving behind files that contain needed information, whether it be specific files, subdirectories or paths.
+
+# SOURCES
+For one of my sources, I used the man grep command (manual) in the terminal to get more information of the different variations of the grep command.
+
+For more information on how they're used, I used the following website.
+
+[https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 
 
 
