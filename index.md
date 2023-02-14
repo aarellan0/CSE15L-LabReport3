@@ -148,7 +148,98 @@ was particularly useful because the resulting file *Bahamas-History.txt* was the
 grep -r command is really useful if searching for extremely specific information, the kind which can't be reached with the regular grep command or other
 related commands such as find.
 
+# Alternate command 4: grep - v
 
+One final command that I researched was grep -v. In a general sense, grep -v does has the opposite functionality that the base grep command has. Grep 
+searches for and returns file information that matches the string pattern input. The grep -v does the opposite by returning the files that DO NOT contain
+the given string. In other words, the command returns the files that DON'T contain the pattern given with the command. We can see this in the first example below. 
+
+## Grep -v example 1
+
+```
+grep -v "travel_guides" findResults.txt
+written_2
+written_2/non-fiction
+written_2/non-fiction/OUP
+written_2/non-fiction/OUP/Berk
+written_2/non-fiction/OUP/Berk/ch2.txt
+written_2/non-fiction/OUP/Berk/ch1.txt
+written_2/non-fiction/OUP/Berk/CH4.txt
+written_2/non-fiction/OUP/Berk/ch7.txt
+written_2/non-fiction/OUP/Abernathy
+written_2/non-fiction/OUP/Abernathy/ch2.txt
+written_2/non-fiction/OUP/Abernathy/ch3.txt
+written_2/non-fiction/OUP/Abernathy/ch1.txt
+written_2/non-fiction/OUP/Abernathy/ch7.txt
+written_2/non-fiction/OUP/Abernathy/ch6.txt
+written_2/non-fiction/OUP/Abernathy/ch8.txt
+written_2/non-fiction/OUP/Abernathy/ch9.txt
+written_2/non-fiction/OUP/Abernathy/ch15.txt
+written_2/non-fiction/OUP/Abernathy/ch14.txt
+written_2/non-fiction/OUP/Rybczynski
+written_2/non-fiction/OUP/Rybczynski/ch2.txt
+written_2/non-fiction/OUP/Rybczynski/ch3.txt
+written_2/non-fiction/OUP/Rybczynski/ch1.txt
+written_2/non-fiction/OUP/Kauffman
+written_2/non-fiction/OUP/Kauffman/ch3.txt
+written_2/non-fiction/OUP/Kauffman/ch1.txt
+written_2/non-fiction/OUP/Kauffman/ch4.txt
+written_2/non-fiction/OUP/Kauffman/ch5.txt
+written_2/non-fiction/OUP/Kauffman/ch7.txt
+written_2/non-fiction/OUP/Kauffman/ch6.txt
+written_2/non-fiction/OUP/Kauffman/ch8.txt
+written_2/non-fiction/OUP/Kauffman/ch9.txt
+written_2/non-fiction/OUP/Kauffman/ch10.txt
+written_2/non-fiction/OUP/Fletcher
+written_2/non-fiction/OUP/Fletcher/ch2.txt
+written_2/non-fiction/OUP/Fletcher/ch1.txt
+written_2/non-fiction/OUP/Fletcher/ch5.txt
+written_2/non-fiction/OUP/Fletcher/ch6.txt
+written_2/non-fiction/OUP/Fletcher/ch9.txt
+written_2/non-fiction/OUP/Fletcher/ch10.txt
+written_2/non-fiction/OUP/Castro
+written_2/non-fiction/OUP/Castro/chR.txt
+written_2/non-fiction/OUP/Castro/chP.txt
+written_2/non-fiction/OUP/Castro/chQ.txt
+written_2/non-fiction/OUP/Castro/chB.txt
+written_2/non-fiction/OUP/Castro/chC.txt
+written_2/non-fiction/OUP/Castro/chA.txt
+written_2/non-fiction/OUP/Castro/chV.txt
+written_2/non-fiction/OUP/Castro/chW.txt
+written_2/non-fiction/OUP/Castro/chM.txt
+written_2/non-fiction/OUP/Castro/chZ.txt
+written_2/non-fiction/OUP/Castro/chL.txt
+written_2/non-fiction/OUP/Castro/chN.txt
+written_2/non-fiction/OUP/Castro/chY.txt
+written_2/non-fiction/OUP/Castro/chO.txt
+```
+
+In this example, we used the grep -v command with the string "travel_guides" on the findResults file that contains all the .txt files in the written_2
+repository. What this did was return all the files within the repository that DO NOT contain the travel_guides path. In the end, only the files
+within the non/fiction path of the written_2 repository were returned as the grep -v command ignored the travel guide files. In general, this command can be useful for narrowing down searches by regating information that we are certain we do not need.
+
+## Grep -v example 2
+
+```
+grep -v ".txt" findResults.txt
+written_2
+written_2/non-fiction
+written_2/non-fiction/OUP
+written_2/non-fiction/OUP/Berk
+written_2/non-fiction/OUP/Abernathy
+written_2/non-fiction/OUP/Rybczynski
+written_2/non-fiction/OUP/Kauffman
+written_2/non-fiction/OUP/Fletcher
+written_2/non-fiction/OUP/Castro
+written_2/travel_guides
+written_2/travel_guides/berlitz1
+written_2/travel_guides/berlitz2
+```
+
+With this second example, I used the grep -v command with ".txt" as the command string. What it did was go into the findResults.txt file and return only
+the few lines that don't contain a ".txt" file. In the end, the command only returned the various paths for subdirectories within written_2 and ignored 
+the paths for specific .txt files. This command is useful because it makes searching for information faster by ignoring information that a user doesn't
+want and leaving behind files that contain needed information, whether it be specific files, subdirectories or paths.
 
 
 
