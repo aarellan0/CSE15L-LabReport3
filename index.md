@@ -1,5 +1,5 @@
-# Lab Report 3 - Researching Commands
-## Aaron Arellano
+# Lab Report 3 - Researching Command Variations
+## Aaron Arellano 
 
 In this third lab report, I chose to research the grep command, which is utilized for finding specific files in directories given certain specifications.
 **The Sources used for ALL commands are at the bottom of the report.**
